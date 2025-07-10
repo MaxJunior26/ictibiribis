@@ -1,4 +1,4 @@
 alert("Teste Inicial");
 
-login = getElementById(#login)
-senha = getElementById(#senha)
+const login = getElementById(#login)
+const senha = getElementById(#senha)
