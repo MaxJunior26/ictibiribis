@@ -1,0 +1,91 @@
+html, body{
+	background-color: #DCE6F2;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.mode{
+	
+}
+
+.container{
+	height: 100%;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	display: flex;
+	flex: 1;
+	margin-bottom: 8px;
+}
+
+.texto_exemplo{
+	font-size: 10px;
+	color: black;
+	margin-top: -0.2px;
+	margin-bottom: -0.2px;
+	margin-left: 40px;
+}
+
+button{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background: rgba(100,149,237, 0.1);
+	border-radius: 10px;
+	border-color: white;
+	transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+
+button:hover{
+	background: rgba(255,255,255, 0.4);
+    transform: scale(1.08);
+}
+
+.esq{
+	font-size: 15px;
+	color: #666;
+	width: 70%;
+	margin-right: 8px;
+	border-radius: 10px;
+	background-color: white;
+	justify-content: center;
+	text-align: center;
+}
+
+.dir{
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	width: 30%;
+	/*background-color: #E8EEFA;*/
+	text-align: center;
+}
+
+.cima{
+	height: 60%;
+	background-color: #E8EEFA;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 10px;
+	border-radius: 10px;
+}
+
+.baixo{
+	height: 40%;
+	background-color: #E8EEFA;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+}
+
+footer {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	background-color: #E8EEFA;
+	text-align: center;
+	font-size: 12px;
+	color: #333;
+	border-radius: 10px;
+}
