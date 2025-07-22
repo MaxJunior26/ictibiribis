@@ -5,10 +5,6 @@ html, body{
 	flex-direction: column;
 }
 
-.mode{
-	
-}
-
 .container{
 	height: 100%;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -25,7 +21,28 @@ html, body{
 	margin-left: 40px;
 }
 
-button{
+.toggle-button{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background: rgba(100,149,237, 0);
+	border-radius: 100%;
+	margin-top: 2px;
+	right: 2px;
+	width: 50px;
+	height: 50px;
+	border-color: white;
+	transition: transform 0.5s ease;
+}
+
+.toggle-button:hover{
+	transform: rotate(360deg);
+}
+
+.img:hover{
+	background-image: url('assets/lua.png');
+    background-size: cover;
+}
+
+.log{
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	background: rgba(100,149,237, 0.1);
 	border-radius: 10px;
@@ -33,7 +50,7 @@ button{
 	transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
 }
 
-button:hover{
+.log:hover{
 	background: rgba(255,255,255, 0.4);
     transform: scale(1.08);
 }
@@ -88,4 +105,23 @@ footer {
 	font-size: 12px;
 	color: #333;
 	border-radius: 10px;
+}
+
+body.dark-mode, html.dark-mode{
+	background-color: #000000;
+	color: white;
+}
+
+body.dark-mode .esq{
+	background-color: #323232;
+	color: white;
+}
+
+body.dark-mode .cima, body.dark-mode .baixo, body.dark-mode .rodape{
+	background-color: #646464;
+	color: white;
+}
+
+body.dark-mode .toggle-button{
+	background-color: white;
 }
