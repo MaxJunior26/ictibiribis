@@ -71,7 +71,6 @@ html, body{
 	flex-direction: column;
 	flex: 1;
 	width: 30%;
-	/*background-color: #E8EEFA;*/
 	text-align: center;
 }
 
@@ -83,6 +82,18 @@ html, body{
 	align-items: center;
 	margin-bottom: 10px;
 	border-radius: 10px;
+}
+
+.cima input{
+	height: 25px;
+	border: none;
+	border-radius: 8px;
+	padding:10px;
+}
+
+.lembre{
+	justify-content: center;
+	align-items: center;
 }
 
 .baixo{
@@ -107,8 +118,14 @@ footer {
 	border-radius: 10px;
 }
 
+/*--------------------------- MODO ESCURO ---------------------------*/
+
 body.dark-mode, html.dark-mode{
 	background-color: #000000;
+	color: white;
+}
+
+body.dark-mode .texto_exemplo, body.dark-mode .log{
 	color: white;
 }
 

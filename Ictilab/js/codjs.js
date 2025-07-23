@@ -23,7 +23,11 @@ function changeDarkMode() {
   document.documentElement.classList.toggle("dark-mode");
 
   const claroEscuro = document.getElementById("claro-escuro");
+  const imagemicticlaro = document.getElementById("logo-ictilab-escuro");
   const modoEscuroAtivo = document.body.classList.contains("dark-mode");
+  const textoReforco = document.getElementById("reforco");
 
   claroEscuro.src = modoEscuroAtivo ? "assets/sol.png" : "assets/lua.png";
+  textoReforco.color = modoEscuroAtivo ? "#add8e6" : "#125bb3";
+  imagemicticlaro.src = modoEscuroAtivo ? "assets/ictilab-claro.png" : "assets/ictilab.png";
 }
