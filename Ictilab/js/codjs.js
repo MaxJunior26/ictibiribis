@@ -24,7 +24,7 @@ function changeDarkMode() {
 
   const claroEscuro = document.getElementById("claro-escuro");
   const imagemicticlaro = document.getElementById("logo-ictilab-escuro");
-  const modoEscuroAtivo = document.body.classList.contains("dark-mode");
+  const modoEscuroAtivo = document.body.classList.contains("dark-mode"); //valida se o modo escuro está ativo
   const textoReforco = document.getElementById("reforco");
 
   claroEscuro.src = modoEscuroAtivo ? "assets/sol.png" : "assets/lua.png";
