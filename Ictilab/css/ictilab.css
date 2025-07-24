@@ -13,6 +13,12 @@ html, body{
 	margin-bottom: 8px;
 }
 
+.azul{
+	color: #125bb3;
+}
+
+
+
 .texto_exemplo{
 	font-size: 10px;
 	color: black;
@@ -23,7 +29,7 @@ html, body{
 
 .toggle-button{
 	font-family: Verdana, Arial, Helvetica, sans-serif;
-	background: rgba(100,149,237, 0);
+	filter: invert(100%);
 	border-radius: 100%;
 	margin-top: 2px;
 	right: 2px;
@@ -55,18 +61,24 @@ html, body{
     transform: scale(1.08);
 }
 
-.esq{
+.dir{
 	font-size: 15px;
 	color: #666;
 	width: 70%;
-	margin-right: 8px;
+	margin-left: 8px;
 	border-radius: 10px;
 	background-color: white;
 	justify-content: center;
 	text-align: center;
 }
 
-.dir{
+.modoClaroEscuro{
+	position:fixed;
+	right: 15px;
+	top: 12px;
+}
+
+.esq{
 	display: flex;
 	flex-direction: column;
 	flex: 1;
@@ -91,9 +103,12 @@ html, body{
 	padding:10px;
 }
 
+.login-section{
+	margin-bottom: 10px;
+}
+
 .lembre{
-	justify-content: center;
-	align-items: center;
+	margin-top: 5px;
 }
 
 .baixo{
@@ -129,7 +144,7 @@ body.dark-mode .texto_exemplo, body.dark-mode .log{
 	color: white;
 }
 
-body.dark-mode .esq{
+body.dark-mode .dir{
 	background-color: #323232;
 	color: white;
 }
@@ -140,5 +155,5 @@ body.dark-mode .cima, body.dark-mode .baixo, body.dark-mode .rodape{
 }
 
 body.dark-mode .toggle-button{
-	background-color: white;
+	filter: invert(100%);
 }

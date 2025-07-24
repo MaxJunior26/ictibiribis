@@ -3,44 +3,81 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="css/ictilab.css" media="screen" />
-		<link rel="icon" type="image/png" href="assets/ictilab-icon.png" />
+		
+		<link rel="stylesheet" href="css/ictilab.css" media="screen" />
+		<link rel="icon" href="assets/ictilab-icon.png" type="image/png" />
 		<script type="text/javascript" src="js/codjs.js"></script>
+		
 		<title>IctiLab</title>
 	</head>
+	
 	<body>
-		<div class="container">
-			<div class="esq">
-				<div>
-					<button class="toggle-button" onclick="changeDarkMode()"><img src="assets/lua.png" id="claro-escuro" alt="simbolo do modo escuro/claro" height="25px"></button>
-				</div>
-				<a><img src="assets/ictilab.png" id="logo-ictilab-escuro" alt="logo ictilab" height="50%"></a>
-				<p><font id="reforco" color="#125bb3"><b>Conecta-se</b></font> aos seus amigos e familiares usando recados e mensagens instantâneas <br>
-				   <font color="#125bb3"><b>Conheça</b></font> novas pessoas através de amigos de seus amigos e comunidades <br>
-				   <font color="#125bb3"><b>Compartilhe</b></font> seus vídeos, fotos e paixões em um só lugar</p>
-			</div>
-			<div class="dir">
+		<main class="container"> <!-- ✅ Uso de <main> para melhor semântica -->
+		
+			<section class="esq"> <!-- ✅ Uso de <section> para melhor semântica -->
 				<div class="cima">
 					<div>
-						Entre com sua <br>
-						<b>conta </b><a href="https://accounts.google.com/servicelogin?hl=pt-br"><img src="https://www.asiba.fr/wp-content/uploads/2023/02/small-google-logo-png-transparent-background-600x200-1.png" target="_blank" height="5%"></a>
-						<br><br>
-						Login: <br><input id="login" placeholder="Usuário"><br>
-						Senha: <br><input id="senha" type="password" placeholder="Senha"><br>
-						<div class="lembre"><p><input type="checkbox">Me lembre neste computador</p></div>
-						<p class="texto_exemplo">Não use em computadores públicos <a href="https://www.google.com/search?q=porque+n%C3%A3o+marcar+a+op%C3%A7%C3%A3o+lembrar+neste+computador+em+computadores+publicos%3F&rlz=1C1GCEU_pt-BRBR1079BR1079&oq=porque+n%C3%A3o+marcar+a+op%C3%A7%C3%A3o+lembrar+neste+computador+em+computadores+publicos%3F&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTEwNjU5ajBqOagCALACAQ&sourceid=chrome&ie=UTF-8" target="_blank">[?]</a></p>
-						<p><button class="log" onclick="validacao()">Entrar</button></p>
+						<p>Entre com sua <br>
+						<strong>conta </strong>
+						<a href="https://accounts.google.com/servicelogin?hl=pt-br" target="_blank">
+							<img src="https://www.asiba.fr/wp-content/uploads/2023/02/small-google-logo-png-transparent-background-600x200-1.png" alt="Entrar com Google" height="20px">
+						</a>
+						</p>
+						
+						<div class="login-section">
+						  <label for="login">Login:</label> <!-- ✅ Adição de <label> melhora acessibilidade -->
+						  <input id="login" name="login" placeholder="Usuário">
+						</div>
+						<div class="password-section">
+						  <label for="senha">Senha:</label> <!-- ✅ Adição de <label> melhora acessibilidade -->
+						  <input id="senha" name="senha" type="password" placeholder="Senha">
+						</div>
+						
+						<div class="lembre">
+							<label><input type="checkbox"> Me lembre neste computador</label> <!-- ✅ checkbox agora dentro de <label> para clicabilidade -->
+						</div>
+						<p class="texto_exemplo">
+							Não use em computadores públicos
+							<a href="https://www.google.com/search?q=porque+n%C3%A3o+marcar+a+op%C3%A7%C3%A3o+lembrar+neste+computador+em+computadores+publicos%3F&rlz=1C1GCEU_pt-BRBR1079BR1079&oq=porque+n%C3%A3o+marcar+a+op%C3%A7%C3%A3o+lembrar+neste+computador+em+computadores+publicos%3F&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTEwNjU5ajBqOagCALACAQ&sourceid=chrome&ie=UTF-8" target="_blank">[?]</a>
+						</p>
+						
+						<p>
+							<button class="log" onclick="validacao()">Entrar</button>
+						</p>
 					</div>
 				</div>
+				
 				<div class="baixo">
 					<p>Ainda não é membro?
 					<br>
-					<a href="" target="_blank">JUNTE-SE AGORA</a></p>
+					<a href="#">JUNTE-SE AGORA</a></p>
 				</div>
-			</div>
-		</div>
+			</section>
+		
+			<section class="dir"> <!-- ✅ Uso de <section> para melhor semântica -->
+				<div class="modoClaroEscuro">
+					<button class="toggle-button" onclick="changeDarkMode()"><img src="assets/lua.png" id="claro-escuro" alt="simbolo do modo escuro/claro" height="25px"></button>
+				</div>
+				<a>
+					<img src="assets/ictilab.png" id="logo-ictilab-escuro" alt="logo ictilab" height="320px">
+				</a>
+				
+				<p>
+					<b class="azul">Conecta-se</b> aos seus amigos e familiares usando recados e mensagens instantâneas <br>
+					<b class="azul">Conheça</b> novas pessoas através de amigos de seus amigos e comunidades <br>
+					<b class="azul">Compartilhe</b> seus vídeos, fotos e paixões em um só lugar
+				</p>
+			</section>
+			
+		</main>
 		<footer class="rodape">
-			<p> &copy; 2025 Maxwell Fernandes - <a href="" target="_blank">Sobre IctiLab</a> - <a href="" target="_blank">Centro de Segurança</a> - <a href="" target="_blank">Privacidade</a> - <a href="" target="_blank">Termos e Condições</a></p>
+			<p>
+            &copy; 2025 Maxwell Fernandes -
+            <a href="#">Sobre IctiLab</a> -
+            <a href="#">Centro de Segurança</a> -
+            <a href="#">Privacidade</a> -
+            <a href="#">Termos e Condições</a>
+        </p>
 		</footer>
 	</body>
 </html>
