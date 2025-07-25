@@ -3,6 +3,8 @@ html, body{
 	height: 100%;
 	display: flex;
 	flex-direction: column;
+	cursor: url('assets/banana.png'), auto;
+	transition: background-color 1.5s ease;
 }
 
 .container{
@@ -13,60 +15,7 @@ html, body{
 	margin-bottom: 8px;
 }
 
-.texto_exemplo{
-	font-size: 10px;
-	color: black;
-	margin-top: -0.2px;
-	margin-bottom: -0.2px;
-	margin-left: 40px;
-}
-
-.toggle-button{
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	background: rgba(100,149,237, 0);
-	border-radius: 100%;
-	margin-top: 2px;
-	right: 2px;
-	width: 50px;
-	height: 50px;
-	border-color: white;
-	transition: transform 0.5s ease;
-}
-
-.toggle-button:hover{
-	transform: rotate(360deg);
-}
-
-.img:hover{
-	background-image: url('assets/lua.png');
-    background-size: cover;
-}
-
-.log{
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	background: rgba(100,149,237, 0.1);
-	border-radius: 10px;
-	border-color: white;
-	transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
-}
-
-.log:hover{
-	background: rgba(255,255,255, 0.4);
-    transform: scale(1.08);
-}
-
 .esq{
-	font-size: 15px;
-	color: #666;
-	width: 70%;
-	margin-right: 8px;
-	border-radius: 10px;
-	background-color: white;
-	justify-content: center;
-	text-align: center;
-}
-
-.dir{
 	display: flex;
 	flex-direction: column;
 	flex: 1;
@@ -82,6 +31,7 @@ html, body{
 	align-items: center;
 	margin-bottom: 10px;
 	border-radius: 10px;
+	transition: background-color 1.5s ease;
 }
 
 .cima input{
@@ -91,9 +41,40 @@ html, body{
 	padding:10px;
 }
 
+.log{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background: rgba(100,149,237, 0.1);
+	border-radius: 10px;
+	border-color: white;
+	transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+
+.log:hover{
+	background: rgba(255,255,255, 0.4);
+    transform: scale(1.08);
+}
+
+.login-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .lembre{
-	justify-content: center;
-	align-items: center;
+	margin-top: 5px;
+}
+
+.texto_exemplo{
+	font-size: 10px;
+	color: black;
+	
+	margin-left: 40px;
 }
 
 .baixo{
@@ -103,6 +84,51 @@ html, body{
 	justify-content: center;
 	align-items: center;
 	border-radius: 10px;
+	transition: background-color 1.5s ease;
+}
+
+
+.dir{
+	font-size: 15px;
+	color: #666;
+	width: 70%;
+	margin-left: 8px;
+	border-radius: 10px;
+	background-color: white;
+	justify-content: center;
+	text-align: center;
+	transition: background-color 1.5s ease;
+}
+
+.toggle-button{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	border-radius: 100%;
+	margin-top: 2px;
+	right: 2px;
+	width: 50px;
+	height: 50px;
+	background-color: white;
+	border-color: white;
+	transition: transform 0.5s ease;
+}
+
+.toggle-button:hover{
+	
+	cursor: pointer;
+}
+
+.modoClaroEscuro{
+	position:fixed;
+	right: 15px;
+	top: 12px;
+}
+
+.azul{
+	color: #125bb3;
+}
+
+#logo-ictilab-escuro{
+	transition: background-color 3.5s ease;
 }
 
 footer {
@@ -116,12 +142,14 @@ footer {
 	font-size: 12px;
 	color: #333;
 	border-radius: 10px;
+	transition: background-color 1.5s ease;
 }
 
 /*--------------------------- MODO ESCURO ---------------------------*/
 
 body.dark-mode, html.dark-mode{
-	background-color: #000000;
+	cursor: url("assets/banana.png"), auto;
+	background-color: #444;
 	color: white;
 }
 
@@ -129,8 +157,8 @@ body.dark-mode .texto_exemplo, body.dark-mode .log{
 	color: white;
 }
 
-body.dark-mode .esq{
-	background-color: #323232;
+body.dark-mode .dir{
+	background-color: #323232;	
 	color: white;
 }
 
@@ -140,5 +168,10 @@ body.dark-mode .cima, body.dark-mode .baixo, body.dark-mode .rodape{
 }
 
 body.dark-mode .toggle-button{
-	background-color: white;
+	background-color: #323232;
+	border-color: #323232;
+}
+
+body.dark-mode .toggle-button img{
+	filter: invert(100%);
 }
