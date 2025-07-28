@@ -1,4 +1,9 @@
+//https://youtu.be/1tjuhCdWPB4
 console.log("Teste Inicial");
+
+const inputUsername = document.querySelector('input[name="login"]');
+const inputPassword = document.querySelector('input[name="senha"]');
+const submitButton = document.querySelector('button[type="submit"]');
 
 const usuarios = {
   macaxwell: "senha123",
@@ -6,18 +11,49 @@ const usuarios = {
   cingrid: "senha789"
 };
 
+let contador=0;
+
 function validacao() {
   const login = document.getElementById("login").value;
   const senha = document.getElementById("senha").value;
+  const mensagemErro = document.getElementById("mensagemErro");
 
-  if (usuarios[login] && usuarios[login] === senha) {
+  if (!login) {
+	document.getElementById("login").placeholder="Favor preencher login";
+	mensagemErro.innerHTML="<font color='red'></font>";
+  } else if (!senha) {
+	document.getElementById("senha").placeholder="Favor preencher senha";
+	mensagemErro.innerHTML="<font color='red'></font>";
+  } else if (usuarios[login] && usuarios[login] === senha) {
 	window.location.href = "../Ictilab/pagina_inicial.html";
   } else {
-	alert("Login ou senha inválidos.");
+	mensagemErro.innerHTML="<font color='red'>Usuário ou senha inválido(s)</font>";
+	
+	document.getElementById("login").value="";
+	document.getElementById("login").placeholder="Usuário";
+	document.getElementById("senha").value="";
+	document.getElementById("senha").placeholder="Senha";
   }
-
-	//https://youtu.be/1tjuhCdWPB4
 }
+
+function logamentos(){
+	// Lógica de login aqui (ex: enviar dados para o servidor)
+    console.log('Login em andamento...');
+}
+
+[inputUsername, inputPassword].forEach(input => {
+	input.addEventListener('keydown', (event) => {
+		if (event.key === 'Enter') {
+			event.preventDefault(); // Evita o comportamento padrão do Enter (que pode ser pular para o próximo campo)
+            submitButton.click(); // Simula o clique no botão de login
+		}
+	});
+});
+
+submitButton.addEventListener('click', (event) => {
+	event.preventDefault(); // Evita o envio padrão do formulário
+	logamentos(); // Chama a função de login
+});
 
 function changeDarkMode() {
 	document.body.classList.toggle("dark-mode");
@@ -32,4 +68,12 @@ function changeDarkMode() {
 
   claroEscuro.src = modoEscuroAtivo ? "assets/sol.png" : "assets/lua.png";
   imagemIctiClaro.src = modoEscuroAtivo ? "assets/ictilab-claro-removebg-preview.png" : "assets/ictilab.png";
+  
+  contador++;
+  
+  if(contador>=5){
+	document.body.style.cursor = "url('assets/banana.ico'), auto"; 
+	console.log("ihu");	
+  }
+  console.log(contador);
 }
