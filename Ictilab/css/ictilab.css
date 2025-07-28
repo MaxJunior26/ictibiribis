@@ -175,3 +175,7 @@ body.dark-mode .toggle-button{
 body.dark-mode .toggle-button img{
 	filter: invert(100%);
 }
+
+body.dark-mode #cor_texto_link{
+	color: white;
+}
