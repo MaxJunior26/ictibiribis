@@ -5,6 +5,7 @@ html, body{
 	flex-direction: column;
 	cursor: url('assets/banana.png'), auto;
 	transition: background-color 1.5s ease;
+	cursor: url('assets/banana.ico'), auto;
 }
 
 .container{
@@ -56,6 +57,7 @@ html, body{
 
 .login-section {
   display: flex;
+  align-items: end;
   flex-direction: column;
   gap: 10px;
 }
@@ -67,7 +69,10 @@ html, body{
 }
 
 .lembre{
-	margin-top: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 15px;
 }
 
 .texto_exemplo{

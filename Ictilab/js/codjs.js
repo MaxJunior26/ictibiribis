@@ -27,7 +27,7 @@ function validacao() {
   } else if (usuarios[login] && usuarios[login] === senha) {
 	window.location.href = "../Ictilab/pagina_inicial.html";
   } else {
-	mensagemErro.innerHTML="<font color='red'>Usuário ou senha inválido(s)</font>";
+	mensagemErro.innerHTML="<font color='red' border-radius='10px' background-color='white'>Usuário ou senha inválido(s)</font>";
 	
 	document.getElementById("login").value="";
 	document.getElementById("login").placeholder="Usuário";
@@ -70,10 +70,10 @@ function changeDarkMode() {
   imagemIctiClaro.src = modoEscuroAtivo ? "assets/ictilab-claro-removebg-preview.png" : "assets/ictilab.png";
   
   contador++;
+  console.log(contador);
   
   if(contador>=5){
 	document.body.style.cursor = "url('assets/banana.ico'), auto"; 
 	console.log("ihu");	
   }
-  console.log(contador);
 }
