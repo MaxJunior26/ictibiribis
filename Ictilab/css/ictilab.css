@@ -26,7 +26,7 @@ html, body{
 
 .cima{
 	height: 60%;
-	background-color: #E8EEFA;
+	background-color: rgba(147, 112, 219, 0.1);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -44,10 +44,13 @@ html, body{
 
 .log{
 	font-family: Verdana, Arial, Helvetica, sans-serif;
-	background: rgba(100,149,237, 0.1);
-	border-radius: 10px;
+	font-size: 15px;
+	background: rgba(153,51,153, 0.1);
+	border-radius: 15px;
 	border-color: white;
 	transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+	width: 18em;
+	height: 2.5em;
 }
 
 .log:hover{
@@ -57,15 +60,49 @@ html, body{
 
 .login-section {
   display: flex;
-  align-items: end;
-  flex-direction: column;
+  align-items: center;
+  flex-direction: line;
   gap: 10px;
 }
 
-.input-group {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.login-section input {
+  width: 22em;
+  height: 3em;
+}
+
+.input-field{
+	position: relative;
+	width: fit-content;
+	margin-top: 10px;
+}
+
+.visibilidade {
+    width: 18px;
+    height: 18px;
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 18px;
+    color: #666A79;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    vertical-align: sub;
+}
+
+.input-group button {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    color: #666a79;
+    font-size: 1.1rem;
 }
 
 .lembre{
@@ -75,16 +112,9 @@ html, body{
 	margin-top: 15px;
 }
 
-.texto_exemplo{
-	font-size: 10px;
-	color: black;
-	
-	margin-left: 40px;
-}
-
 .baixo{
 	height: 40%;
-	background-color: #E8EEFA;
+	background-color: rgba(147, 112, 219, 0.1);
 	display: flex;
 	justify-content: center;
 	align-items: center;

@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="css/ictilab.css" media="screen" />
 		<link rel="icon" href="assets/ictilab-icon.png" type="image/png" />
 		<script type="text/javascript" src="js/codjs.js" defer></script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		
 		<title>IctiLab</title>
 	</head>
@@ -26,24 +27,19 @@
 						
 						<div class="login-section">
 						  <div class="input-group">
-							<label for="login">Login:</label>
 							<input id="login" name="login" placeholder="Usuário">
-						  </div>
-						  <div class="input-group">
-							<label for="senha">Senha:</label>
-							<span><i class="fa fa-eye" id="olho"></i></span>
-							<input id="senha" name="senha" type="password" placeholder="Senha">
+							<div class="input-field">
+								<input id="senha" name="senha" type="password" placeholder="Senha">
+								<button type="button" onclick="visivelSenha()">
+									<i class="visibilidade" id="icon-visibility">visibility_off</i>
+								</button>
+							</div>
 						  </div>
 						</div>
 						
 						<div class="lembre">
 							<label><input type="checkbox"></label>Me lembre neste computador <!-- ✅ checkbox agora dentro de <label> para clicabilidade -->
-						</div>
-						<p class="texto_exemplo">
-							Não use em computadores públicos
-							<a href="https://www.google.com/search?q=porque+n%C3%A3o+marcar+a+op%C3%A7%C3%A3o+lembrar+neste+computador+em+computadores+publicos%3F&rlz=1C1GCEU_pt-BRBR1079BR1079&oq=porque+n%C3%A3o+marcar+a+op%C3%A7%C3%A3o+lembrar+neste+computador+em+computadores+publicos%3F&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTEwNjU5ajBqOagCALACAQ&sourceid=chrome&ie=UTF-8" target="_blank" id="cor_texto_link">[?]</a>
-						</p>
-						
+						</div>						
 						<p>
 							<button class="log" onclick="validacao()" type="submit">Entrar</button>
 						</p>

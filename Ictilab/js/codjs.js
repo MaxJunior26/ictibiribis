@@ -77,3 +77,12 @@ function changeDarkMode() {
 	console.log("ihu");	
   }
 }
+
+function visivelSenha() {
+	const icone = document.getElementById("icon-visibility");
+	const senha = document.getElementById("senha");
+	const eSenha = senha.type === "password";
+	
+	senha.type = eSenha ? "text" : "password";
+	icone.textContent = eSenha ? "visibility" : "visibility_off";
+}
