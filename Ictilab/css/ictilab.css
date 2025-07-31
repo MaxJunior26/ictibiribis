@@ -1,37 +1,43 @@
+html{
+	background: linear-gradient(70deg, plum 0, violet 35%, MediumOrchid 75%, purple 100%);
+	background-size: cover;
+	transition: background 1.5s ease-in-out;
+}
+
 html, body{
-	background-color: #DCE6F2;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	cursor: url('assets/banana.png'), auto;
-	transition: background-color 1.5s ease;
-	cursor: url('assets/banana.ico'), auto;
+	align-items: center;
+	cursor: url('../assets/banana.png');
 }
 
 .container{
-	height: 100%;
+	width: 70dvw;
+	height: 80dvh;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	display: flex;
+	align-items: center;
+	justify-content: center;
 	flex: 1;
 	margin-bottom: 8px;
 }
 
 .esq{
 	display: flex;
+	width: 40%;
+	height: 80%;
 	flex-direction: column;
-	flex: 1;
-	width: 30%;
 	text-align: center;
 }
 
 .cima{
-	height: 60%;
-	background-color: rgba(147, 112, 219, 0.1);
+	background-color: rgba(147, 112, 219, 0.2);
+	height: 70%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 10px;
-	border-radius: 10px;
+	border-radius: 10px 0 0 0;
 	transition: background-color 1.5s ease;
 }
 
@@ -113,26 +119,28 @@ html, body{
 }
 
 .baixo{
-	height: 40%;
-	background-color: rgba(147, 112, 219, 0.1);
+	background-color: rgba(147, 112, 219, 0.2);
+	height: 30%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-radius: 10px;
+	border-radius: 0 0 0 10px;
 	transition: background-color 1.5s ease;
+	box-shadow: 5px 8px 8px gray;
 }
 
 
 .dir{
-	font-size: 15px;
+	font-size: 14px;
 	color: #666;
-	width: 70%;
-	margin-left: 8px;
-	border-radius: 10px;
+	width: 60%;
+	height: 80%;
+	border-radius: 0 10px 10px 0;
 	background-color: white;
 	justify-content: center;
 	text-align: center;
 	transition: background-color 1.5s ease;
+	box-shadow: 5px 8px 8px gray;
 }
 
 .toggle-button{
@@ -182,9 +190,11 @@ footer {
 
 /*--------------------------- MODO ESCURO ---------------------------*/
 
-body.dark-mode, html.dark-mode{
-	cursor: url("assets/banana.png"), auto;
-	background-color: #444;
+html.dark-mode{
+	cursor: url('assets/banana.png'), auto;
+	background: no-repeat url('../assets/testefundoescuro.jpg');
+	background-size: cover;
+	transition: background 1.5s ease-in-out;
 	color: white;
 }
 
@@ -198,7 +208,7 @@ body.dark-mode .dir{
 }
 
 body.dark-mode .cima, body.dark-mode .baixo, body.dark-mode .rodape{
-	background-color: #646464;
+	background-color: rgba(220, 220, 220, 0.5);
 	color: white;
 }
 
