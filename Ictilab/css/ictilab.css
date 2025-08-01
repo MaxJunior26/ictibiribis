@@ -1,10 +1,11 @@
-html{
+/*html{
 	background: linear-gradient(70deg, plum 0, violet 35%, MediumOrchid 75%, purple 100%);
 	background-size: cover;
 	transition: background 1.5s ease-in-out;
-}
+}*/
 
 html, body{
+	background: #87cefa;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
