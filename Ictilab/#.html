@@ -1,6 +1,6 @@
 <!DOCTYPE html5>
 <html lang="pt-BR">
-	
+
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +14,14 @@
 	</head>
 	
 	<body>
+		
+		<div class="nuvens-bg">
+			<img src="assets/nuvem-claro.png" class="nuvem nuvem1" alt="Nuvem 1">
+			<img src="assets/nuvem-claro.png" class="nuvem nuvem2" alt="Nuvem 2">
+			<img src="assets/nuvem-claro.png" class="nuvem nuvem3" alt="Nuvem 3">
+			<img src="assets/nuvem-claro.png" class="nuvem nuvem4" alt="Nuvem 4">
+			<img src="assets/nuvem-claro.png" class="nuvem nuvem5" alt="Nuvem 5">
+		</div>
 		
 		<main class="container"> <!-- ✅ Uso de <main> para melhor semântica -->
 		
@@ -34,7 +42,10 @@
 						</div>
 						
 						<div class="lembre">
-							<input type="checkbox">Me lembre neste computador <!-- ✅ checkbox agora dentro de <label> para clicabilidade -->
+							<label for="lembrar">
+							  <input type="checkbox" id="lembrar">
+							</label>
+							Me lembre neste computador
 						</div>						
 						<p>
 							<button class="log" onclick="validacao()" type="submit">Entrar</button>

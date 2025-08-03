@@ -20,15 +20,15 @@ function validacao() {
   const mensagemErro = document.getElementById("mensagemErro");
 
   if (!login) {
-	document.getElementById("login").placeholder="Favor preencher login";
-	mensagemErro.innerHTML="<font color='red'></font>";
+	document.getElementById("login").placeholder="Favor preencher usuário";
+	mensagemErro.innerHTML=`<span style='color:red; border-radius:10px; background:rgba(255,255,255,0.6); padding:4px;'>Favor preencher usuário</span>`;
   } else if (!senha) {
 	document.getElementById("senha").placeholder="Favor preencher senha";
-	mensagemErro.innerHTML="<font color='red'></font>";
+	mensagemErro.innerHTML=`<span style='color:red; border-radius:10px; background:rgba(255,255,255,0.6); padding:4px;'>Favor preencher senha</span>`;
   } else if (usuarios[login] && usuarios[login] === senha) {
 	window.location.href = "../Ictilab/pagina_inicial.html";
   } else {
-	mensagemErro.innerHTML = "<span style='color:red; border-radius:10px; background:rgba(255,255,255,0.6); padding:4px;'>Usuário ou senha inválido(s)</span>";
+	mensagemErro.innerHTML = `<span style='color:red; border-radius:10px; background:rgba(255,255,255,0.6); padding:4px;'>Usuário ou senha inválido(s)</span>`;
 	
 	document.getElementById("login").value="";
 	document.getElementById("login").placeholder="Usuário";
@@ -56,26 +56,66 @@ submitButton.addEventListener('click', (event) => {
 	logamentos(); // Chama a função de login
 });
 
-function changeDarkMode() {
-	document.body.classList.toggle("dark-mode");
-	document.documentElement.classList.toggle("dark-mode");
 
-	const claroEscuro = document.getElementById("claro-escuro");
-	const imagemIctiClaro = document.getElementById("logo-ictilab-escuro");
-	const modoEscuroAtivo = document.body.classList.contains("dark-mode"); //valida se o modo escuro está ativo
-	document.querySelectorAll('.azul').forEach(el => {
-		el.style.color = modoEscuroAtivo ? "#add8e6" : "#125bb3";
-	})
+// Lembra Usuário e Senha preechidos para o próximo acesso
+document.addEventListener('DOMContentLoaded', () => {
+	const lembrarDados = localStorage.getItem('lembrarDados');
+	if (lembrarDados) {
+		const { login, senha } = JSON.parse(lembrarDados);
+		document.getElementById("login").value = login;
+		document.getElementById("senha").value = senha;
+		document.getElementById("lembrar").checked = true; // Marca a checkbox
+	}
+	document.getElementById("lembrar").addEventListener('change', function () {
+		if (this.checked) {
+			const login = document.getElementById("login").value;
+			const senha = document.getElementById("senha").value;
+			localStorage.setItem('lembrarDados', JSON.stringify({ login, senha }));
+		} else {
+			localStorage.removeItem('lembrarDados'); // Remove os dados se a checkbox for desmarcada
+		}
+	});
+});
+
+
+// Aplica o modo salvo ao carregar
+document.addEventListener('DOMContentLoaded', () => {
+  const darkMode = localStorage.getItem('darkMode');
+  if (darkMode === 'true') {
+    document.body.classList.add('dark-mode');
+    document.documentElement.classList.add('dark-mode');
+    // Atualiza ícones e cores
+    document.getElementById("claro-escuro").src = "assets/sol.png";
+    document.getElementById("logo-ictilab-escuro").src = "assets/ictilab-claro.png";
+    document.querySelectorAll('.azul').forEach(el => {
+      el.style.color = "#add8e6";
+    });
+  }
+});
+
+// Atualiza o localStorage ao trocar o modo
+function changeDarkMode() {
+  document.body.classList.toggle("dark-mode");
+  document.documentElement.classList.toggle("dark-mode");
+
+  const claroEscuro = document.getElementById("claro-escuro");
+  const imagemIctiClaro = document.getElementById("logo-ictilab-escuro");
+  const modoEscuroAtivo = document.body.classList.contains("dark-mode");
+  document.querySelectorAll('.azul').forEach(el => {
+    el.style.color = modoEscuroAtivo ? "#add8e6" : "#125bb3";
+  });
 
   claroEscuro.src = modoEscuroAtivo ? "assets/sol.png" : "assets/lua.png";
   imagemIctiClaro.src = modoEscuroAtivo ? "assets/ictilab-claro.png" : "assets/ictilab.png";
-  
+
+  localStorage.setItem('darkMode', modoEscuroAtivo); // Salva escolha
+
   contador++;
   console.log(contador);
-  
-  if(contador>=5){
-	document.body.style.cursor = "url('assets/banana.ico'), auto"; 
-	console.log("ihu");	
+
+  if (contador >= 5) {
+    document.body.style.cursor = "url('assets/banana.ico'), auto";
+    console.log("ihu");
   }
 }
 
