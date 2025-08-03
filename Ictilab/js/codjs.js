@@ -67,7 +67,7 @@ function changeDarkMode() {
 	})
 
   claroEscuro.src = modoEscuroAtivo ? "assets/sol.png" : "assets/lua.png";
-  imagemIctiClaro.src = modoEscuroAtivo ? "assets/ictilab-claro-removebg-preview.png" : "assets/ictilab.png";
+  imagemIctiClaro.src = modoEscuroAtivo ? "assets/ictilab-claro.png" : "assets/ictilab.png";
   
   contador++;
   console.log(contador);

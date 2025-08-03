@@ -191,9 +191,9 @@ footer {
 
 /*--------------------------- MODO ESCURO ---------------------------*/
 
-html.dark-mode{
+html.dark-mode, body.dark-mode{
 	cursor: url('assets/banana.png'), auto;
-	background: no-repeat url('../assets/testefundoescuro.jpg');
+	background-color: #125bb3;
 	background-size: cover;
 	transition: background 1.5s ease-in-out;
 	color: white;
