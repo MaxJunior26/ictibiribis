@@ -14,8 +14,8 @@ const usuarios = {
 let contador=0;
 
 function validacao() {
-  const login = document.getElementById("login").value;
-  const senha = document.getElementById("senha").value;
+  let login = document.getElementById("login").value;
+  let senha = document.getElementById("senha").value;
   const mensagemErro = document.getElementById("mensagemErro");
 
   if (!login) {
@@ -27,7 +27,7 @@ function validacao() {
   } else if (usuarios[login] && usuarios[login] === senha) {
 	window.location.href = "../Ictilab/pagina_inicial.html";
   } else {
-	mensagemErro.innerHTML="<font color='red' border-radius='10px' background-color='white'>Usuário ou senha inválido(s)</font>";
+	mensagemErro.innerHTML = "<span style='color:red; border-radius:10px; background:rgba(255,255,255,0.6); padding:4px;'>Usuário ou senha inválido(s)</span>";
 	
 	document.getElementById("login").value="";
 	document.getElementById("login").placeholder="Usuário";

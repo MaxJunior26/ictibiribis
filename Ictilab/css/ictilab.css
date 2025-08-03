@@ -5,6 +5,7 @@ html, body{
 	flex-direction: column;
 	align-items: center;
 	cursor: url('../assets/banana.png');
+	transition: background-color 1.5s ease-in-out;
 }
 
 .container{
@@ -117,6 +118,7 @@ html, body{
 	background-color: rgba(147, 112, 219, 0.2);
 	height: 30%;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	border-radius: 0 0 0 10px;
@@ -124,6 +126,33 @@ html, body{
 	box-shadow: 5px 8px 8px gray;
 }
 
+.titulo-membro {
+    margin-bottom: 10px;
+}
+
+.acessos{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.altLog{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	background: rgba(153,51,153, 0.1);
+	border-radius: 15px;
+	border-color: white;
+	transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+	width: 10em;
+	height: 2.5em;
+}
+
+.altLog:hover{
+	background: rgba(255,255,255, 0.4);
+    transform: scale(1.08);
+}
 
 .dir{
 	font-size: 14px;
@@ -189,7 +218,7 @@ html.dark-mode, body.dark-mode{
 	cursor: url('assets/banana.png'), auto;
 	background-color: #125bb3;
 	background-size: cover;
-	transition: background 1.5s ease-in-out;
+	transition: background-color 1.5s ease-in-out;
 	color: white;
 }
 
