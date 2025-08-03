@@ -141,11 +141,17 @@ html, body{
 .altLog{
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 15px;
-	background: rgba(153,51,153, 0.1);
-	border-radius: 15px;
-	border-color: white;
+	background: rgba(255,255,255, 0.4);
+	border-radius: 40px;
+	border: none;
+	width: 3.5em;
+	height: 3.5em;
 	transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
-	width: 10em;
+	align-items: center;
+}
+
+.altLog img{
+	width: 2.5em;
 	height: 2.5em;
 }
 
