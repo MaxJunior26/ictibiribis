@@ -14,6 +14,7 @@ const usuarios = {
 
 let contador=0;
 
+//Valida se o login e senha estão preenchidos e corretos
 function validacao() {
   let login = document.getElementById("login").value;
   let senha = document.getElementById("senha").value;
@@ -42,6 +43,7 @@ function logamentos(){
     console.log('Login em andamento...');
 }
 
+//Realiza o login com a tecla Enter
 [inputUsername, inputPassword].forEach(input => {
 	input.addEventListener('keydown', (event) => {
 		if (event.key === 'Enter') {
@@ -119,6 +121,7 @@ function changeDarkMode() {
   }
 }
 
+//Deixa vísivel o campo de senha como um texto legível
 function visivelSenha() {
 	const icone = document.getElementById("icon-visibility");
 	const senha = document.getElementById("senha");

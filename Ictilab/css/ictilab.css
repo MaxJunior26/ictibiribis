@@ -216,7 +216,7 @@ html, body{
 	height: 50px;
 	background-color: white;
 	border-color: white;
-	transition: transform 0.5s ease;
+	transition: background 0.5s ease;
 }
 
 .toggle-button:hover{
