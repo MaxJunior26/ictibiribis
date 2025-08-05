@@ -6,20 +6,19 @@ html, body{
 	transition: background-color 1.5s ease-in-out;
 }
 
-.container{
-	height: 100%;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
+header{
 	display: flex;
-	flex: 1;
-	margin-bottom: 8px;
-}
-
-.texto_exemplo{
-	font-size: 10px;
-	color: black;
-	margin-top: -0.2px;
-	margin-bottom: -0.2px;
-	margin-left: 40px;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	list-style: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 5em;
+	background-color: rgba(90, 147, 202, 0.5);
+	font-family: Verdana, Arial, Helvetica, sans-serif, bold;
 }
 
 nav ul {
@@ -30,7 +29,7 @@ nav ul {
 }
 
 nav{
-	width: 40%;
+	width: 40vw;
 	justify-content: center;
 }
 
@@ -49,24 +48,18 @@ nav ul li{
 	margin-left: 1rem;
 }
 
-header{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	list-style: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	background-color: #5A93CA;
-	font-family: Verdana, Arial, Helvetica, sans-serif, bold;
+.texto_exemplo{
+	font-size: 10px;
+	color: black;
+	margin-top: -0.2px;
+	margin-bottom: -0.2px;
+	margin-left: 40px;
 }
 
 .direita{
 	display: flex;
 	flex-direction: row;
-	width: 60%;
+	width: 60vw;
 	justify-content: center;
 }
 
@@ -136,28 +129,63 @@ header{
 }
 
 .modoClaroEscuro{
-	position: fixed;
+	display: flex;
+	justify-content: flex-end;
+	position: static;
 	right: 15px;
-	top: 12px;
+	width: 20em;
+	margin-right: 0.5em;
+	
 }
 
 .topo_dir{
 	height: 2em;
     display: flex;
-	flex-wrap: wrap;
-	margin-left: 2px;
-	justify-content: space-around; /* distribui os itens */
-    list-style: none;
-	background: white;
+	margin: auto;
+	justify-content: flex-end;
+	width: 30em;
 }
 
-.topo_dir ul{
-	align-items: center; /* centraliza verticalmente */
-    list-style: none;
+.votestar{
+	display: flex;
+	padding-top: 20em;
 }
 
-.topo_dir img{
-	margin-bottom: -2.2%;
+.visibilidade {
+    width: 18px;
+    height: 18px;
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 18px;
+    color: #666A79;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    vertical-align: sub;
+}
+
+.input-group button {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    color: #666a79;
+    font-size: 1.1rem;
+}
+
+.container{
+	height: 100vh;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	display: flex;
+	flex: 1;
+	margin-bottom: 8px;
 }
 
 footer {
@@ -174,18 +202,6 @@ footer {
 
 /*--------------------------- MODO ESCURO ---------------------------*/
 
-@media (prefers-color-scheme: dark) {
-    body {
-		background-color: #121212;
-		color: white;
-    }
-    .dark-mode-bg {
-		background-color: #222;
-    }
-    .dark-mode-text {
-		color: #ddd;
-    }
-}
 
 body.dark-mode .toggle-button{
 	background-color: #323232;
