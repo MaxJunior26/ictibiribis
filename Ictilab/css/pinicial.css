@@ -21,16 +21,18 @@ header{
 	font-family: Verdana, Arial, Helvetica, sans-serif, bold;
 }
 
+nav{
+	display: flex;
+	justify-content: space-evenly;
+	width: 30vw;
+	justify-content: center;
+}
+
 nav ul {
 	display: flex;
 	justify-content: space-between;
 	list-style: none;
 	text-decoration: none;
-}
-
-nav{
-	width: 40vw;
-	justify-content: center;
 }
 
 nav ul a{
@@ -58,6 +60,7 @@ nav ul li{
 
 .direita{
 	display: flex;
+	align-items: center;
 	flex-direction: row;
 	width: 60vw;
 	justify-content: center;
@@ -113,6 +116,20 @@ nav ul li{
 	margin-left: 15%;
 }
 
+.topo_dir{
+    display: flex;
+	justify-content: center;
+	margin: auto;
+	width: 18vw;
+}
+
+.modoClaroEscuro{
+	display: flex;
+	justify-content: center;
+	width: 8vw;
+	
+}
+
 .toggle-button{
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	border-radius: 100%;
@@ -126,24 +143,6 @@ nav ul li{
 .toggle-button:hover{
 	
 	cursor: pointer;
-}
-
-.modoClaroEscuro{
-	display: flex;
-	justify-content: flex-end;
-	position: static;
-	right: 15px;
-	width: 20em;
-	margin-right: 0.5em;
-	
-}
-
-.topo_dir{
-	height: 2em;
-    display: flex;
-	margin: auto;
-	justify-content: flex-end;
-	width: 30em;
 }
 
 .votestar{
