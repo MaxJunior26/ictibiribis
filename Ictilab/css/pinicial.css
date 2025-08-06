@@ -17,8 +17,9 @@ header{
 	left: 0;
 	width: 100vw;
 	height: 5em;
-	background-color: rgba(90, 147, 202, 0.5);
+	background-color: #fff;
 	font-family: Verdana, Arial, Helvetica, sans-serif, bold;
+	transition: background-color 1.5s ease-in-out;
 }
 
 nav{
@@ -33,15 +34,17 @@ nav ul {
 	justify-content: space-between;
 	list-style: none;
 	text-decoration: none;
+	align-items: center;
 }
 
 nav ul a{
 	text-decoration: none;
-	color: white;
+	color: black;
+	transition: background-color 1.5s ease-in-out;
 }
 
 nav ul a:hover{
-	color: black;
+	color: #87cefa;
 	font-size: 15px;
 }
 
@@ -62,8 +65,8 @@ nav ul li{
 	display: flex;
 	align-items: center;
 	flex-direction: row;
-	width: 60vw;
-	justify-content: center;
+	width: 50vw;
+	justify-content: flex-end;
 }
 
 .topo_esq{
@@ -118,9 +121,10 @@ nav ul li{
 
 .topo_dir{
     display: flex;
-	justify-content: center;
-	margin: auto;
-	width: 18vw;
+    margin: auto;
+    width: 18vw;
+    flex-direction: row;
+    align-items: stretch;
 }
 
 .modoClaroEscuro{
@@ -137,17 +141,25 @@ nav ul li{
 	height: 50px;
 	background-color: white;
 	border-color: white;
-	transition: background 0.5s ease;
+	transition: background-color 1.5s ease;
 }
 
 .toggle-button:hover{
-	
 	cursor: pointer;
 }
 
-.votestar{
+.busca{
+	border-radius: 10px 0 0 10px;
+	height: 2.5em;
+	border-right: none;
+}
+
+.buscar{
 	display: flex;
-	padding-top: 20em;
+	align-items: center;
+	border-radius: 0 10px 10px 0;
+	background: white;
+	border-left: none;
 }
 
 .visibilidade {
@@ -203,10 +215,47 @@ footer {
 
 
 body.dark-mode .toggle-button{
-	background-color: #323232;
-	border-color: #323232;
+	background-color: #333;
+	border-color: #333;
 }
 
 body.dark-mode .toggle-button img{
 	filter: invert(100%);
+}
+
+body.dark-mode #cor_texto_link{
+	color: white;
+}
+
+html.dark-mode, body.dark-mode{
+	cursor: url('assets/banana.png'), auto;
+	background-color: #125bb3;
+	background-size: cover;
+	transition: background-color 1.5s ease-in-out;
+	color: white;
+}
+
+body.dark-mode header{
+	background-color: #000;
+	font-family: Verdana, Arial, Helvetica, sans-serif, bold;
+	color: white;
+	transition: background-color 1.5s ease-in-out;
+}
+
+body.dark-mode nav ul a{
+	color: white;
+	transition: background-color 1.5s ease-in-out;
+}
+
+body.dark-mode .busca{
+	border-radius: 10px 0 0 10px;
+	filter: invert(80%);
+	border-right: none;
+}
+
+body.dark-mode .buscar{
+	display: flex;
+	border-radius: 0 10px 10px 0;
+	filter: invert(80%);
+	border-left: none;
 }
