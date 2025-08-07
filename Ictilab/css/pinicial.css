@@ -19,6 +19,7 @@ header{
 	height: 5em;
 	background-color: #fff;
 	font-family: Verdana, Arial, Helvetica, sans-serif, bold;
+	/*clip-path: path(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);*/
 	transition: background-color 1.5s ease-in-out;
 }
 
@@ -65,7 +66,7 @@ nav ul li{
 	display: flex;
 	align-items: center;
 	flex-direction: row;
-	width: 50vw;
+	width: 55vw;
 	justify-content: flex-end;
 }
 
@@ -192,23 +193,26 @@ nav ul li{
 }
 
 .container{
-	height: 100vh;
+	min-height: 100vh;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	display: flex;
 	flex: 1;
 	margin-bottom: 8px;
+	background: rgba(86,205,252,0.6);
 }
 
 footer {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	width: 100%;
 	display: flex;
+	width: 100vw;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
 	justify-content: center;
 	background-color: #E8EEFA;
 	text-align: center;
+	position: fixed;
 	font-size: 12px;
 	color: #333;
-	border-radius: 10px;
+	bottom: 0;
+	left: 0;
 }
 
 /*--------------------------- MODO ESCURO ---------------------------*/
