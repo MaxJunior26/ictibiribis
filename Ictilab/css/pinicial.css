@@ -236,7 +236,7 @@ html.dark-mode, body.dark-mode{
 }
 
 body.dark-mode header{
-	background-color: #000;
+	background-color: #333;
 	font-family: Verdana, Arial, Helvetica, sans-serif, bold;
 	color: white;
 	transition: background-color 1.5s ease-in-out;
