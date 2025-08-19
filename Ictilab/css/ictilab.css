@@ -260,6 +260,11 @@ footer {
 	transition: background-color 1.5s ease;
 }
 
+footer a{
+	text-decoration: none;
+	color: blue;
+}
+
 /*--------------------------- MODO ESCURO ---------------------------*/
 
 html.dark-mode, body.dark-mode{

@@ -9,7 +9,8 @@ const submitButton = document.querySelector('button[type="submit"]');
 const usuarios = {
   macaxwell: "senha123",
   ingridiane: "senha456",
-  cingrid: "senha789"
+  cingrid: "senha789",
+  alexandre: "cuteCuddleCozy2309"
 };
 
 let contador=0;
@@ -26,6 +27,8 @@ function validacao() {
   } else if (!senha) {
 	document.getElementById("senha").placeholder="Favor preencher senha";
 	mensagemErro.innerHTML=`<span style='color:red; border-radius:10px; background:rgba(255,255,255,0.6); padding:4px;'>Favor preencher senha</span>`;
+  } else if (login == 'alexandre' && usuarios[login] === senha){
+	window.location.href = "../Ictilab/assets/old/whatsapp_mockup/index.html";  
   } else if (usuarios[login] && usuarios[login] === senha) {
 	window.location.href = "../Ictilab/pagina_inicial.html";
   } else {
