@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: url('5.jpg') no-repeat center center fixed;
+  background: url('3.jpg') no-repeat center center fixed;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -10,15 +10,10 @@ body {
 }
 
 i{
-    font-family: 'Material Symbols Outlined';
-    font-style: normal;
-    font-size: 20px;
-    line-height: 18px;
-    color: #fff;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    scrollbar-color: rgba(1, 1, 1, 0.8);
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-size: 20px;
+  color: #fff;
 }
 
 .chat-container {
@@ -58,14 +53,26 @@ i{
 }
 
 .chat-messages i{
-	font-family: 'Material Symbols Outlined';
-    font-style: normal;
-    font-size: 15px;
-    color: #fff;
-    flex: none;
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-size: 15px;
+  color: #fff;
+  flex: none;
 	display: flex;
-    order: 0;
-    flex-grow: 0;
+  order: 0;
+  flex-grow: 0;
+}
+
+.chat-messages::-webkit-scrollbar {
+    width: 0.5em;
+    background-color: rgba(1, 1, 1, 0.6);
+    outline: none;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    width: 0.5em;
+    background-color: lightgray;
+    outline: none;
 }
 
 /* INFO BOX */
@@ -91,6 +98,8 @@ i{
 .chat-messages {
   padding: 10px;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .msg {
@@ -110,6 +119,7 @@ i{
 .msg.sent {
   background: #005c4b;
   align-self: center;
+  margin-left: auto;
 }
 
 .msg .time {
