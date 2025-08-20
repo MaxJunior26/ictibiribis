@@ -1,29 +1,49 @@
 <!DOCTYPE html5>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mockup WhatsApp</title>
+  <title>Seu humor me chamou muito a atenção</title>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-  <link rel="stylesheet" href="../css/codigocss.css">
+  <link rel="stylesheet" href="../css/transition.css">
 </head>
+
 <body>
+  <audio id="player" src="../audio/Life Itself.mp3"></audio>
+
   <div class="chat-container">
+    <!-- Header -->
     <div class="chat-header">
-      <span>Alexandre</span>
+      <div class="contact-info">
+        <span><i class="arrow">arrow_back</i></span>
+        <img src="../assets/ale.png" class="profile-pic" alt="Foto">
+        <span class="contact-name">Alexandre</span>
+      </div>
+      <div class="icons">
+        <span><i class="camera">videocam</i></span>
+        <span><button onclick="document.querySelector('audio').play()"><i class="phone">call</i></button></span>
+        <span><i class="options">more_vert</i></span>
+      </div>
     </div>
+    
     <div class="chat-messages" id="chat">
-      <div class="message received">Que mais que vc tem? <span class="time">11:15</span></div>
-      <div class="message received">Alguma IST? <span class="time">11:15</span></div>
-      <div class="message received">Cuidado com a MPox eim <span class="time">11:15</span></div>
-      <div class="message received img"><img src="../assets/cat-skeptical-cat.png" alt="img" height="120px" background="url('cat-skeptical-cat.png')"><span class="time">11:15</span></div>
-      <div class="message received img"><i>turn_right</i>forward<img src="../assets/carlosSekiro.jpg" alt="img"><span class="time">11:15</span></div>
-      <div class="message sent">Logo o sekiro <span class="time">11:16</span></div>
-      <div class="message sent">Eu vou ver sobre ist e dst de tarde <span class="time">11:16</span></div>
+      <div class="msg received">Que mais que vc tem? <span class="time">11:15</span></div>
+      <div class="msg received">Alguma IST? <span class="time">11:15</span></div>
+      <div class="msg received">Cuidado com a MPox eim <span class="time">11:15</span></div>
+      <div class="msg received img">
+        <img src="../assets/cat-skeptical-cat.png" alt="img" height="120px" background="url('cat-skeptical-cat.png')">
+        <span class="time">11:15</span></div>
+      <div class="msg received img"><i>turn_right</i>forward<img src="../assets/carlosSekiro.jpg" height="300px" alt="img">
+        <span class="time">11:15</span></div>
+      <div class="msg sent">Logo o sekiro<span class="time"><i class="lido">done_all</i>11:16</span></div>
+      <div class="msg sent">Eu vou ver sobre ist e dst de tarde
+        <span class="time"><i class="lido">done_all</i>11:16</span></div>
     </div>
-    <div class="chat-input">
+
+    <div class="input-box">
       <input type="text" id="msgInput" placeholder="Mensagem">
-      <button onclick="sendMessage()">➤</button>
+      <button onclick="sendMessage()"><i>send</i></button>
     </div>
   </div>
   <script src="script.js"></script>

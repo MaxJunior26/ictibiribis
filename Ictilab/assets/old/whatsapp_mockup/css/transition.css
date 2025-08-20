@@ -1,12 +1,17 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: none;
+  font-family: Helvetica, sans-serif;
+  background: url('../assets/3.jpg') no-repeat center center fixed;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  backdrop-filter: blur(8px);
+}
+
+.arrow{
+  cursor: pointer;
 }
 
 i{
@@ -17,9 +22,9 @@ i{
 }
 
 .chat-container {
-  width: 360px;
-  height: 640px;
-  background: url('fundo.png') no-repeat center center fixed;
+  width: 420px;
+  height: 746px;
+  background: url('../assets/fundo.png') no-repeat center center fixed;
   display: flex;
   flex-direction: column;
   border-radius: 15px;
@@ -52,6 +57,30 @@ i{
   cursor: pointer;
 }
 
+.phone{
+  display: inline-block;
+  animation: phone 0.5s;
+  animation-iteration-count: 5;
+}
+
+@keyframes phone {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(1px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(1px, 0, 0);
+  }
+}
+
 .chat-messages i{
   font-family: 'Material Symbols Outlined';
   font-style: normal;
@@ -74,6 +103,19 @@ i{
     background-color: lightgray;
     outline: none;
 }
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
 
 /* INFO BOX */
 .info-box {
@@ -114,34 +156,46 @@ i{
 .msg.received {
   background: #202c33;
   align-self: flex-start;
+  min-width: 55px;
+  max-width: 350px;
 }
 
 .msg.sent {
   background: #005c4b;
   align-self: center;
   margin-left: auto;
+  min-width: 60px;
+  max-width: 350px;
 }
 
 .msg .time {
-  font-size: 10px;
+  align-items: center;
+  font-size: 12px;
   color: #bbb;
-  display: block;
+  display: flex;
+  position: relative;
   text-align: right;
+  direction: rtl;
+  justify-content: flex-start;
+}
+
+.lido{
+  position: relative;
+  margin-left: 3px;
+  margin-bottom: 2px;
+  vertical-align: middle;
 }
 
 /* QUOTED MESSAGE */
-.msg.quoted {
-  
-  
-}
 
 .quote {
-	padding-left: 6px;	
+	padding: 6px;	
 	border-left: 3px solid #34b7f1;
 	font-size: 12px;
 	color: #34b7f1;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 5px;
+  margin: -2px -6px 0px -6px;
 }
 
 .quote .small {
@@ -154,6 +208,7 @@ i{
   background: #202c33;
   display: flex;
   padding: 8px;
+  margin-top: auto;
 }
 
 .input-box input {
