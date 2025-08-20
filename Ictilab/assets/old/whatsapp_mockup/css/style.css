@@ -57,6 +57,10 @@ i{
   cursor: pointer;
 }
 
+a{
+  color: lightblue
+}
+
 .phone{
   display: inline-block;
   animation: phone 0.5s;
