@@ -157,6 +157,24 @@ button:focus {
   font-size: 14px;
 }
 
+.msg img {
+  border-radius: 8px;
+  position: relative;
+  font-size: 14px;
+}
+
+.msg:has(img) .time {
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    right: 15px;
+    background: rgba(17, 27, 33, 0.75);
+    padding: 2px 5px;
+    border-radius: 7px;
+    color: white;
+    font-size: 11px;
+}
+
 .msg.received {
   background: #202c33;
   align-self: flex-start;
@@ -172,7 +190,7 @@ button:focus {
   max-width: 350px;
 }
 
-.msg .time {
+.msg .time, .msg .timer {
   align-items: center;
   font-size: 12px;
   color: #bbb;
