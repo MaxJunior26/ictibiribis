@@ -10,29 +10,19 @@
   </head>
 
   <body>
-    <div id="video-container"
-      style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 100;">
-      <video id="fullscreen-video" alt="meu-video-pra-ti" style="width: 100%; height: 100%; object-fit: cover;" controls aria-describedby="video-desc">
-        <source src="../audio/obrigado.mp4" type="video/mp4">
-        <track src="../audio/obrigado.vtt" kind="subtitles" srclang="pt" label="Português">
-        Seu navegador não suporta o elemento de vídeo.
-      </video>
-      <div id="video-desc" style="display:none;">
-        Este vídeo mostra uma mensagem especial de agradecimento.
-      </div>
+    <video controls autoplay onended="showDescription()">
+      <source src="../video/obrigado.mp4" type="video/mp4">
+      <track src="../video/obrigado.vtt" kind="subtitles" srclang="pt" label="Português">
+      <track src="../video/obrigado-desc.vtt" kind="descriptions" srclang="pt" label="Descrição em Português">
+      Seu navegador não suporta o elemento de vídeo.  
+      <source src="../audio/obrigado.mp4" type="video/mp4">
+      Seu navegador não suporta o elemento de vídeo.
+    </video>
+    <div id="video-desc" style="display:none;">
+      Este vídeo mostra uma mensagem especial de agradecimento.
     </div>
   </body>
 
-  <script>
-    document.getElementById('camera-icon').addEventListener('click', function () {
-      document.querySelector('.chat-container').style.display = 'none';
 
-      var videoContainer = document.getElementById('video-container');
-      videoContainer.style.display = 'block';
-
-      var video = document.getElementById('fullscreen-video');
-      video.play();
-    });
-  </script>
 
 </html>
