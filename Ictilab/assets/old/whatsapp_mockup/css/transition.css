@@ -99,13 +99,25 @@ i{
 
 .chat-messages::-webkit-scrollbar {
     width: 0.5em;
-    background-color: rgba(1, 1, 1, 0.6);
+    background-color: rgba(1, 1, 1, 0);
     outline: none;
 }
 
 .chat-messages::-webkit-scrollbar-thumb {
     width: 0.5em;
-    background-color: lightgray;
+    background-color: rgba(255, 255, 255, 0);
+    outline: none;
+}
+
+.chat-container:hover .chat-messages::-webkit-scrollbar-thumb {
+    width: 0.5em;
+    background-color: rgba(255, 255, 255, 0.4);
+    outline: none;
+}
+
+.chat-container:hover .chat-messages::-webkit-scrollbar {
+    width: 0.5em;
+    background-color: rgba(1, 1, 1, 0.6);
     outline: none;
 }
 
