@@ -18,6 +18,7 @@ i{
   font-family: 'Material Symbols Outlined';
   font-style: normal;
   font-size: 20px;
+  color: white;
 }
 
 .chat-container {
@@ -184,15 +185,15 @@ button:focus {
 }
 
 .msg:has(img) .time {
-    position: absolute;
-    z-index: 1;
-    bottom: 10px;
-    right: 15px;
-    background: rgba(17, 27, 33, 0.75);
-    padding: 2px 5px;
-    border-radius: 7px;
-    color: white;
-    font-size: 11px;
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  right: 15px;
+  background: rgba(17, 27, 33, 0.75);
+  padding: 2px 5px;
+  border-radius: 7px;
+  color: white;
+  font-size: 11px;
 }
 
 .msg .time {
@@ -205,6 +206,32 @@ button:focus {
   direction: rtl;
   justify-content: flex-start;
   opacity: 50%;
+}
+
+.msg .timer {
+  width: 27px;
+  background-color: #202c33;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 12px;
+  color: #bbb;
+  margin: 0% 0% 0% 68%;
+}
+
+.react{
+  width: 20px;
+  background-color: #202c33;
+  padding: 5px;
+  border-radius: 15px;
+  border: solid 1px black;
+  margin: -3.4% 0% 0% 0.4%;
+  display: flex;
+  transform: translateZ(2px);
+}
+
+.react img {
+  width: 20px;
+  height: 20px;
 }
 
 .msg .forwardy {
