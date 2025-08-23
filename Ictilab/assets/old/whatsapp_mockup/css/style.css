@@ -24,7 +24,43 @@ i{
 .chat-container {
   width: 420px;
   height: 746px;
-  background: url('../assets/fundo.png') no-repeat center center fixed;
+  background: url('../assets/fundo.png') no-repeat center fixed;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  overflow: hidden;
+  color: white;
+}
+
+.chat-container2 {
+  width: 420px;
+  height: 746px;
+  background: url('../assets/4.png') no-repeat center center fixed;
+
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  overflow: hidden;
+  color: white;
+}
+
+.chat-container3 {
+  width: 420px;
+  height: 746px;
+  background: url('../assets/6.png') no-repeat center fixed;
+
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  overflow: hidden;
+  color: white;
+}
+
+.chat-container4 {
+  width: 420px;
+  height: 746px;
+  background: url('../assets/2.png') center no-repeat fixed;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   border-radius: 15px;
@@ -108,13 +144,13 @@ a{
     outline: none;
 }
 
-.chat-container:hover .chat-messages::-webkit-scrollbar-thumb {
+.chat-container:hover .chat-messages::-webkit-scrollbar-thumb, .chat-container2:hover .chat-messages::-webkit-scrollbar-thumb, .chat-container3:hover .chat-messages::-webkit-scrollbar-thumb, .chat-container4:hover .chat-messages::-webkit-scrollbar-thumb {
     width: 0.5em;
     background-color: rgba(255, 255, 255, 0.4);
     outline: none;
 }
 
-.chat-container:hover .chat-messages::-webkit-scrollbar {
+.chat-container:hover .chat-messages::-webkit-scrollbar, .chat-container2:hover .chat-messages::-webkit-scrollbar, .chat-container3:hover .chat-messages::-webkit-scrollbar, .chat-container4:hover .chat-messages::-webkit-scrollbar {
     width: 0.5em;
     background-color: rgba(1, 1, 1, 0.6);
     outline: none;
