@@ -1,0 +1,292 @@
+html, body{
+	background: #87cefa;
+	min-height: 60em;
+	display: flex;
+	flex-direction: column;
+	transition: background-color 1.5s ease-in-out;
+}
+
+header{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	list-style: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 5em;
+	background-color: #fff;
+	font-family: Verdana, Arial, Helvetica, sans-serif, bold;
+	/*clip-path: path(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);*/
+	transition: background-color 1.5s ease-in-out;
+}
+
+nav{
+	display: flex;
+	justify-content: space-evenly;
+	width: 30vw;
+	justify-content: center;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	text-decoration: none;
+	align-items: center;
+}
+
+nav ul a{
+	text-decoration: none;
+	color: black;
+	transition: background-color 1.5s ease-in-out;
+}
+
+nav ul a:hover{
+	color: #87cefa;
+	font-size: 15px;
+}
+
+nav ul li{
+	text-decoration: none;
+	margin-left: 1rem;
+}
+
+.texto_exemplo{
+	font-size: 10px;
+	color: black;
+	margin-top: -0.2px;
+	margin-bottom: -0.2px;
+	margin-left: 40px;
+}
+
+.direita{
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	width: 55vw;
+	justify-content: flex-end;
+}
+
+.topo_esq{
+	height: 20%;
+	width: 60%;
+	justify-content: start;
+}
+
+.topo_inicio{
+	height: 100%;
+    display: flex;
+	flex-wrap: wrap;
+    flex-direction: row;  /* força horizontal */
+    justify-content: start; /* distribui os itens */
+    align-items: center; /* centraliza verticalmente */
+    list-style: none;
+    padding: 0;
+	left: 0;
+    margin-top: 2%;
+	text-align: center;
+	background: black;
+	margin-right: 0.5%;
+}
+
+.topo_inicio li{
+	height: 30%;
+	width: 13%;
+	border-radius: 8px;
+	background-color: #E8EEFA;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 15px;
+}
+
+.topo_inicio li:hover{
+	height: 30%;
+	width: 13%;
+	border-radius: 8px;
+	background-color: #5A93CA;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: grab;
+}
+
+.topo_inicio li:nth-child(1){
+	all: initial;
+	margin-right: 4%;
+	margin-left: 15%;
+}
+
+.topo_dir{
+    display: flex;
+    margin: auto;
+    width: 18vw;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.modoClaroEscuro{
+	display: flex;
+	justify-content: center;
+	width: 8vw;
+	
+}
+
+.toggle-button{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	border-radius: 100%;
+	width: 50px;
+	height: 50px;
+	background-color: white;
+	border-color: white;
+	transition: background-color 1.5s ease;
+}
+
+.toggle-button:hover{
+	cursor: pointer;
+}
+
+.busca{
+	border-radius: 10px 0 0 10px;
+	height: 2.5em;
+	border-right: none;
+}
+
+.buscar{
+	display: flex;
+	align-items: center;
+	border-radius: 0 10px 10px 0;
+	background: white;
+	border-left: none;
+}
+
+.visibilidade {
+    width: 18px;
+    height: 18px;
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 18px;
+    color: #666A79;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    vertical-align: sub;
+}
+
+.input-group button {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    color: #666a79;
+    font-size: 1.1rem;
+}
+
+.container{
+	min-height: 100vh;
+	display: flex;
+	flex: 1;
+	padding-top: 5em;
+	margin-bottom: 8px;
+	flex-direction: column;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.curso{
+	width: 15vw;
+	height: 30vh;
+	background: linear-gradient(#e66465, #9198e5);
+	color: white;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	overflow: hidden;
+}
+
+.curso:hover{
+	width: 16vw;
+	height: 31vh;
+	color: black;
+	background-image: url('https://eixo.digital/wp-content/uploads/2020/03/vendas-online.gif');
+}
+
+
+
+footer {
+	display: flex;
+	width: 100vw;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	justify-content: center;
+	background-color: #E8EEFA;
+	text-align: center;
+	position: fixed;
+	font-size: 12px;
+	color: #333;
+	bottom: 0;
+	left: 0;
+}
+
+footer a{
+	text-decoration: none;
+	color: blue;
+}
+
+/*--------------------------- MODO ESCURO ---------------------------*/
+
+
+body.dark-mode .toggle-button{
+	background-color: #333;
+	border-color: #333;
+}
+
+body.dark-mode .toggle-button img{
+	filter: invert(100%);
+}
+
+body.dark-mode #cor_texto_link{
+	color: white;
+}
+
+html.dark-mode, body.dark-mode{
+	cursor: url('assets/banana.png'), auto;
+	background-color: #125bb3;
+	background-size: cover;
+	transition: background-color 1.5s ease-in-out;
+	color: white;
+}
+
+body.dark-mode header{
+	background-color: #333;
+	font-family: Verdana, Arial, Helvetica, sans-serif, bold;
+	color: white;
+	transition: background-color 1.5s ease-in-out;
+}
+
+body.dark-mode nav ul a{
+	color: white;
+	transition: background-color 1.5s ease-in-out;
+}
+
+body.dark-mode .busca{
+	border-radius: 10px 0 0 10px;
+	filter: invert(80%);
+	border-right: none;
+}
+
+body.dark-mode .buscar{
+	display: flex;
+	border-radius: 0 10px 10px 0;
+	filter: invert(80%);
+	border-left: none;
+}
