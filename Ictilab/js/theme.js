@@ -37,5 +37,4 @@ function changeDarkMode() {
     document.body.style.cursor = "url('assets/banana.ico'), auto";
     console.log("ihu");
   }
-
 }
