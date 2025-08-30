@@ -220,10 +220,8 @@ nav ul li{
 	width: 41vw;
 	height: 21vh;
 	color: black;
-	background-image: url('https://eixo.digital/wp-content/uploads/2020/03/vendas-online.gif');
+	background-image: url('https://eixo.digital/wp-content/uploads/2020/03/vendas-online.gif') no-repeat;
 }
-
-
 
 footer {
 	display: flex;
