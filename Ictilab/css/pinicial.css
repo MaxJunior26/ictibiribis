@@ -204,7 +204,7 @@ nav ul li{
 .curso{
 	width: 20vw;
 	height: 40vh;
-	background: linear-gradient(#e66465, #9198e5);
+	background: #333;
 	color: white;
 	border-radius: 10px;
 	display: flex;
@@ -215,12 +215,15 @@ nav ul li{
 }
 
 .curso:hover{
+	vertical-align: top;
 	width: 21vw;
 	height: 41vh;
 	color: black;
 	background-image: url('../assets/vendas-online.gif');
 	background-repeat: no-repeat;
 	background-size: cover;
+
+	transition: 0.5s;
 }
 
 .curso:nth-child(2):hover{
