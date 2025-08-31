@@ -198,7 +198,6 @@ nav ul li{
 	display: flex;
 	flex: 1;
 	margin-bottom: 8px;
-	background: rgba(86,205,252,0.3);
 	margin-top: 5em;
 }
 
@@ -212,13 +211,20 @@ nav ul li{
 	align-items: center;
 	text-align: center;
 	overflow: hidden;
+	margin-left: 20px;
 }
 
 .curso:hover{
 	width: 21vw;
 	height: 41vh;
 	color: black;
-	background-image: url('https://eixo.digital/wp-content/uploads/2020/03/vendas-online.gif');
+	background-image: url('../assets/vendas-online.gif');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.curso:nth-child(2):hover{
+	background-image: url('../assets/corretor.gif');
 }
 
 footer {
