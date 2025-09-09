@@ -107,7 +107,7 @@ function changeDarkMode() {
   const imagemIctiClaro = document.getElementById("logo-ictilab-escuro");
   const modoEscuroAtivo = document.body.classList.contains("dark-mode");
   document.querySelectorAll('.azul').forEach(el => {
-    el.style.color = modoEscuroAtivo ? "#add8e6" : "#125bb3";
+    el.style.color = modoEscuroAtivo ? "#add8e6" : "#062f61";
   });
 
   claroEscuro.src = modoEscuroAtivo ? "assets/sol.png" : "assets/lua.png";
@@ -126,6 +126,7 @@ function changeDarkMode() {
 
 //Deixa vísivel o campo de senha como um texto legível
 function visivelSenha() {
+	
 	const icone = document.getElementById("icon-visibility");
 	const senha = document.getElementById("senha");
 	const eSenha = senha.type === "password";

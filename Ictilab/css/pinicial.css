@@ -3,7 +3,6 @@ html, body{
 	min-height: 60em;
 	display: flex;
 	flex-direction: column;
-	transition: background-color 1.5s ease-in-out;
 }
 
 header{
@@ -20,7 +19,13 @@ header{
 	background-color: #fff;
 	font-family: Verdana, Arial, Helvetica, sans-serif, bold;
 	/*clip-path: path(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);*/
-	transition: background-color 1.5s ease-in-out;
+}
+
+.menu{
+	display: none;
+	font-size: 30px;
+	font-family: 'Material Icons';
+	user-select: none;
 }
 
 nav{
@@ -41,7 +46,6 @@ nav ul {
 nav ul a{
 	text-decoration: none;
 	color: black;
-	transition: background-color 1.5s ease-in-out;
 }
 
 nav ul a:hover{
@@ -142,7 +146,6 @@ nav ul li{
 	height: 50px;
 	background-color: white;
 	border-color: white;
-	transition: background-color 1.5s ease;
 }
 
 .toggle-button:hover{
@@ -222,7 +225,6 @@ nav ul li{
 	background-image: url('../assets/vendas-online.gif');
 	background-repeat: no-repeat;
 	background-size: cover;
-
 	transition: 0.5s;
 }
 
@@ -267,9 +269,8 @@ body.dark-mode #cor_texto_link{
 
 html.dark-mode, body.dark-mode{
 	cursor: url('assets/banana.png'), auto;
-	background-color: #125bb3;
+	background-color: #062f61;
 	background-size: cover;
-	transition: background-color 1.5s ease-in-out;
 	color: white;
 }
 
@@ -277,12 +278,10 @@ body.dark-mode header{
 	background-color: #333;
 	font-family: Verdana, Arial, Helvetica, sans-serif, bold;
 	color: white;
-	transition: background-color 1.5s ease-in-out;
 }
 
 body.dark-mode nav ul a{
 	color: white;
-	transition: background-color 1.5s ease-in-out;
 }
 
 body.dark-mode .busca{

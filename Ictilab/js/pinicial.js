@@ -1,4 +1,10 @@
-//Ao passar o mouse, o texto fica no topo
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("menu-botao");
+  const menu = document.getElementById("menu");
+  
+  
 
-hoverBox.addEventListener('mouseover', (event) () {
-  this.position
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+});
