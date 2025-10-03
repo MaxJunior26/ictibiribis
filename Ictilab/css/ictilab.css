@@ -20,6 +20,10 @@ html, body{
 	z-index: 1;
 }
 
+#logo-ictilab-escuro-cima{
+	display: none;
+}
+
 .nuvens-bg {
     position: fixed;
     top: 0;
@@ -95,7 +99,7 @@ html, body{
 .login-section {
   display: flex;
   align-items: center;
-  flex-direction: line;
+  flex-direction: row;
   gap: 10px;
 }
 

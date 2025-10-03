@@ -1,0 +1,269 @@
+@media screen and (max-width: 865px) {
+
+	html, body{
+		background: #87cefa;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		cursor: url('../assets/banana.png');
+	}
+	
+	#logo-ictilab-escuro-cima{
+		display: inline;
+	}
+	
+	#logo-ictilab-escuro{
+		display: none;
+	}	
+
+	.container {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.esq{
+		display: flex;
+		width: 85vw;
+		height: 45vh;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.cima{
+		background-color: rgba(18, 91, 179, 0.5);
+		height: 70%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 10px 10px 0 0;
+	}
+
+	.cima input{
+		height: 25px;
+		border: none;
+		border-radius: 8px;
+		padding:10px;
+	}
+
+	.log{
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 15px;
+		background: rgba(255,255,255, 0.1);
+		border-radius: 15px;
+		border-color: white;
+		transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+		width: 18em;
+		height: 2.5em;
+	}
+
+	.log:hover{
+		background: rgba(255,255,255, 0.4);
+		transform: scale(1.08);
+	}
+
+	.login-section {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+	}
+
+	.login-section input {
+	  width: 15em;
+	  height: 3em;
+	}
+
+	.input-field{
+		position: relative;
+		width: fit-content;
+		margin-top: 10px;
+	}
+
+	.visibilidade {
+		font-family: 'Material Icons';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 18px;
+		color: #666A79;
+		flex: none;
+		order: 0;
+		flex-grow: 0;
+	}
+
+	.input-group button {
+		position: absolute;
+		right: 12px;
+		top: 50%;
+		transform: translateY(-50%);
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 0;
+		margin: 0;
+		color: #666a79;
+		font-size: 1.1rem;
+	}
+
+	.lembre{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 15px;
+	}
+
+	.baixo{
+		background-color: rgba(18, 91, 179, 0.5);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		border-radius: 0 0 0 0;
+		box-shadow: 5px 8px 8px gray;
+	}
+
+	.titulo-membro {
+		margin-bottom: 10px;
+	}
+
+	.acessos{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+		gap: 10px;
+		margin-bottom: 25px;
+	}
+
+	.altLog{
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 15px;
+		background: rgba(255,255,255, 0.4);
+		border-radius: 40px;
+		border: none;
+		width: 3.5em;
+		height: 3.5em;
+		transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+		align-items: center;
+	}
+
+	.altLog img{
+		width: 2.5em;
+		height: 2.5em;
+	}
+
+	.altLog:hover{
+		background: rgba(255,255,255, 0.4);
+		transform: scale(1.08);
+	}
+
+	.dir{
+		font-size: 14px;
+		color: #666;
+		width: 85vw;
+		height: 20vh;
+		border-radius: 0 0 10px 10px;
+		background-color: white;
+		display: flex;
+		justify-content: center;
+		text-align: left;
+		text-indent: 10px; 
+		box-shadow: 5px 8px 8px gray;
+	}
+	
+	.dir p{
+		margin: 2px -5px 0 10px;
+	}
+
+	.downdireita{
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.toggle-button{
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		border-radius: 100%;
+		margin-top: 2px;
+		right: 2px;
+		width: 50px;
+		height: 50px;
+		background-color: white;
+		border-color: white;
+		transition: background 0.5s ease;
+	}
+
+	.toggle-button:hover{
+		
+		cursor: pointer;
+	}
+
+	.modoClaroEscuro{
+		position:fixed;
+		right: 15px;
+		top: 12px;
+	}
+
+	.azul{
+		color: #125bb3;
+	}
+
+	footer {
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		background-color: #E8EEFA;
+		text-align: center;
+		font-size: 12px;
+		color: #333;
+		border-radius: 10px;
+	}
+
+	footer a{
+		text-decoration: none;
+		color: blue;
+	}
+
+	/*--------------------------- MODO ESCURO ---------------------------*/
+
+	html.dark-mode, body.dark-mode{
+		cursor: url('assets/banana.png'), auto;
+		background-color: #125bb3;
+		background-size: cover;
+		color: white;
+	}
+
+	body.dark-mode .cima, body.dark-mode .baixo{
+		background-color: rgba(141, 195, 242, 0.5);
+	}
+
+	body.dark-mode .texto_exemplo, body.dark-mode .log{
+		color: white;
+	}
+
+	body.dark-mode .dir{
+		background-color: #323232;	
+		color: white;
+	}
+
+	body.dark-mode .cima, body.dark-mode .baixo, body.dark-mode .rodape{
+		background-color: rgba(220, 220, 220, 0.5);
+		color: white;
+	}
+
+	body.dark-mode .toggle-button{
+		background-color: #323232;
+		border-color: #323232;
+	}
+
+	body.dark-mode .toggle-button img{
+		filter: invert(100%);
+	}
+
+	body.dark-mode #cor_texto_link{
+		color: white;
+	}

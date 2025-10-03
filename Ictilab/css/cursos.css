@@ -39,26 +39,6 @@ header{
 	align-items: center;
 }
 
-nav .contaACC{
-	list-style: none;
-	display: flex;
-	flex-direction: column;
-	background: #333;
-	position: absolute;
-	top: 60px;
-	left: 10px;
-	width: 150px;
-	padding: 10px;
-	border-radius: 8px;
-	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-nav.contaACC li a{
-	text-decoration: none;
-	color: black;
-	font-weight: bold;
-}
-
 .perfil i:hover{
 	box-shadow: 1px 1px 0 0 gray;
 	border-radius: 80px;
@@ -114,7 +94,7 @@ nav ul a{
 
 nav ul a:hover{
 	color: #87cefa;
-	font-size: 20px;
+	font-size: 15px;
 }
 
 nav ul li{
@@ -306,7 +286,6 @@ nav ul li{
 }
 
 footer {
-	display: block;
 	width: 100vw;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	justify-content: center;

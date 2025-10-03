@@ -92,6 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Atualiza ícones e cores
     document.getElementById("claro-escuro").src = "assets/sol.png";
     document.getElementById("logo-ictilab-escuro").src = "assets/ictilab-claro.png";
+	document.getElementById("logo-ictilab-escuro-cima").src = "assets/ictilab-claro.png";
     document.querySelectorAll('.azul').forEach(el => {
       el.style.color = "#add8e6";
     });
@@ -105,6 +106,7 @@ function changeDarkMode() {
 
   const claroEscuro = document.getElementById("claro-escuro");
   const imagemIctiClaro = document.getElementById("logo-ictilab-escuro");
+  const imagemIctiEscuro = document.getElementById("logo-ictilab-escuro-cima");
   const modoEscuroAtivo = document.body.classList.contains("dark-mode");
   document.querySelectorAll('.azul').forEach(el => {
     el.style.color = modoEscuroAtivo ? "#add8e6" : "#062f61";
@@ -112,16 +114,9 @@ function changeDarkMode() {
 
   claroEscuro.src = modoEscuroAtivo ? "assets/sol.png" : "assets/lua.png";
   imagemIctiClaro.src = modoEscuroAtivo ? "assets/ictilab-claro.png" : "assets/ictilab.png";
+  imagemIctiEscuro.src = modoEscuroAtivo ? "assets/ictilab-claro.png" : "assets/ictilab.png";
 
   localStorage.setItem('darkMode', modoEscuroAtivo); // Salva escolha
-
-  contador++;
-  console.log(contador);
-
-  if (contador >= 5) {
-    document.body.style.cursor = "url('assets/banana.ico'), auto";
-    console.log("ihu");
-  }
 }
 
 //Deixa vísivel o campo de senha como um texto legível
@@ -134,3 +129,5 @@ function visivelSenha() {
 	senha.type = eSenha ? "text" : "password";
 	icone.textContent = eSenha ? "visibility" : "visibility_off";
 }
+
+//Abre opções de perfil
